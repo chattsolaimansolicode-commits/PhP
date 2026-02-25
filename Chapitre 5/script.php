@@ -1,24 +1,25 @@
 <?php
-function greeting(){
-    echo "Hello, World <br>";
+function saluer() {
+    echo "Bonjour tout le monde !";
 }
-greeting();
+saluer();
 
-function somme($a,$b){
-    return $a+$b;
+function addition($a, $b) {
+    return $a + $b;
 }
-echo "La somme est: ". somme(1,9)."<br>";
+echo "Somme : " . addition(5, 10);
 
-function name($nom = "student"){
-    echo "Hello,".$nom. "<br>";
+function bienvenue($nom = "visiteur") {
+    echo "Bienvenue " . $nom;
 }
-name();
+bienvenue(); // Affiche "Bienvenue visiteur"
 
-$i=0;
-function add(){
-    static $i=0;
-    $i++;
-    echo $i;
+$compteur = 0;
+
+function incrementer() {
+    static $compteur = 0;
+    $compteur++;
+    echo $compteur;
 }
-add();
-?>
+incrementer(); // Affiche 1
+incrementer(); // Affiche 2
